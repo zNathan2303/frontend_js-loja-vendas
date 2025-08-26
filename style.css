@@ -39,6 +39,10 @@ header {
     height: 16px;
 }
 
+main {
+    flex-grow: 1;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
