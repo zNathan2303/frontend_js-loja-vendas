@@ -6,6 +6,7 @@ function criarCard(produto) {
     const container = document.getElementById('container')
 
     const card = document.createElement('div')
+    const categoria = document.createElement('div')
     const imagem = document.createElement('img')
     const infoProduto = document.createElement('div')
     const nome = document.createElement('span')
@@ -14,12 +15,14 @@ function criarCard(produto) {
     const descricao = document.createElement('span')
 
     card.className = 'card'
+    categoria.className = 'categoria-produto'
     imagem.className = 'imagem-produto'
     infoProduto.className = 'info-produto'
     nome.className = 'nome-produto'
     preco.className = 'preco-produto'
     descricao.className = 'descricao-produto'
 
+    categoria.textContent = produto.categoria
     imagem.src = './img/' + produto.imagem
     nome.textContent = produto.nome
     preco.textContent = 'R$ ' + produto.preco
@@ -28,6 +31,7 @@ function criarCard(produto) {
 
     clickNaImagem(imagem, nome)
 
+    card.appendChild(categoria)
     card.appendChild(imagem)
     infoProduto.append(nome, preco, classificacao, descricao)
     card.appendChild(infoProduto)
