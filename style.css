@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: turquoise;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra-busca {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    background-color: white;
+    width: 588px;
+    height: 40px;
+    margin: 10px;
+}
+
+.texto-busca {
+    color: gray;
+}
+
+.lupa-icon {
+    height: 16px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 44px;
+    padding-bottom: 24px;
+    width: 1200px;
+    /* height: 500px; */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 389px;
+    width: 230px;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.imagem-produto {
+    object-fit: contain;
+    height: 225px;
+    width: 225px;
+}
+
+.info-produto {
+    padding: 14px 14px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.preco-produto {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.descricao-produto {
+    font-size: 12px;
+}
