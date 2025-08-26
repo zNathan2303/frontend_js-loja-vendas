@@ -42,9 +42,9 @@ header {
 .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px 10px;
     padding-top: 44px;
-    padding-bottom: 24px;
+    padding-bottom: 40px;
     width: 1200px;
     /* height: 500px; */
 }
@@ -53,7 +53,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 400px;
+    height: 420px;
     width: 230px;
     box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.1);
 }
