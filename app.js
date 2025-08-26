@@ -10,6 +10,7 @@ function criarCard(produto) {
     const infoProduto = document.createElement('div')
     const nome = document.createElement('span')
     const preco = document.createElement('span')
+    const classificacao = document.createElement('span')
     const descricao = document.createElement('span')
 
     card.className = 'card'
@@ -22,14 +23,13 @@ function criarCard(produto) {
     imagem.src = './img/' + produto.imagem
     nome.textContent = produto.nome
     preco.textContent = 'R$ ' + produto.preco
+    classificacao.textContent = classificacaoProduto(produto.classificacao)
     descricao.textContent = produto.descricao
 
     clickNaImagem(imagem, nome)
 
     card.appendChild(imagem)
-    infoProduto.appendChild(nome)
-    infoProduto.appendChild(preco)
-    infoProduto.appendChild(descricao)
+    infoProduto.append(nome, preco, classificacao, descricao)
     card.appendChild(infoProduto)
 
     container.appendChild(card)
@@ -41,4 +41,29 @@ function clickNaImagem(imagem, nomeProduto) {
     imagem.addEventListener('click', () => {
         alert(`Você clicou no(a) ${nomeProduto.textContent}`)
     })
+}
+
+function classificacaoProduto(classificacao) {
+    switch (classificacao) {
+        case 0:
+            return '☆☆☆☆☆'
+            break
+        case 1:
+            return '★☆☆☆☆'
+            break
+        case 2:
+            return '★★☆☆☆'
+            break
+        case 3:
+            return '★★★☆☆'
+            break
+        case 4:
+            return '★★★★☆'
+            break
+        case 5:
+            return '★★★★★'
+            break
+        default:
+            return 'Sem avaliação'
+    }
 }
