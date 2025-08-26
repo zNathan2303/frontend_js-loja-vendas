@@ -24,6 +24,8 @@ function criarCard(produto) {
     preco.textContent = 'R$ ' + produto.preco
     descricao.textContent = produto.descricao
 
+    clickNaImagem(imagem, nome)
+
     card.appendChild(imagem)
     infoProduto.appendChild(nome)
     infoProduto.appendChild(preco)
@@ -34,3 +36,9 @@ function criarCard(produto) {
 }
 
 produtos.forEach(criarCard)
+
+function clickNaImagem(imagem, nomeProduto) {
+    imagem.addEventListener('click', () => {
+        alert(`Você clicou no(a) ${nomeProduto.textContent}`)
+    })
+}
